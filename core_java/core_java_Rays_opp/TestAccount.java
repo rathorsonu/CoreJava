@@ -1,7 +1,7 @@
 package core_java_Rays_opp;
 
 public class TestAccount {
-public static void main(String[] args) {
+public static void main(String[] args) throws IncificiantBalance {
 	Account1 sd=new Account1();
 	sd.setNumber("9174586524");
 	sd.setAccountType("saving");
@@ -11,7 +11,7 @@ public static void main(String[] args) {
 	System.out.println("Balance = "+sd.getBalance());
 System.out.println();
 	sd.deposit(500);
-	sd.withdrawal(1000);
+	sd.withdrawal(45001);
 	sd.fundtransfer(50);
 	sd.paybill(100);
 	System.out.println("remaning balance="+sd.getBalance());

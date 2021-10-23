@@ -1,5 +1,7 @@
 package core_java_Rays_opp;
 
+import javax.naming.InsufficientResourcesException;
+
 public class Account1 {
 private String number;
 private String accountType;
@@ -27,9 +29,16 @@ public void deposit(double d) {
 	balance=balance+d;
 	System.out.println("deposit Ammount is: +"+d);
 }
-public void withdrawal(double w) {
+public void withdrawal(double w) throws IncificiantBalance {
 	balance=balance-w;
+	if(balance<500) {
+		IncificiantBalance sd =new IncificiantBalance();
+		throw sd;
+	}
+	
+	
 	System.out.println("withdrawal:--"+(-w));
+	
 }
 public void fundtransfer(double f) {
 	balance=balance-f;
